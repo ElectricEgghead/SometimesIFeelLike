@@ -1,0 +1,103 @@
+/**
+ * Program that teaches users about different societal realities using a matching game.
+ * Title: Sometimes, I Feel Like
+ * 1/13/2020
+ **/
+ 
+#include <iostream>
+#include <string>
+
+std::string userName;
+int userAnswer;
+std::string difference;
+std::string userGuess;
+std::string correctAnswer;
+
+int userNoAnswer(){
+    
+    int userNoResponse;
+    
+    std::cout << "\nHas someone ever told you they felt misunderstood?";
+    std::cout << "\n\nWhat did they say they felt? ";
+    std::cout << "\n\n-----------------\nSad - 1\nAlone - 2\nScared - 3\nTired - 4\nUnheard - 5\n---------------------";
+    std::cout << "\n>> ";
+    std::cin >> userNoResponse;
+    
+    switch (userNoResponse){
+        
+        case 1:
+        std::cout << "\nSAD.";
+        std::cout << "\n\nSadness can be tough and tricky. How to help? What if you say the wrong thing?";
+        break;
+        
+        case 2:
+        std::cout << "\nALONE.";
+        std::cout << "\n\nEven though there are billions of people around us, we can still feel extremely alone, can't we?";
+        std::cout << "\nLike there's no one to talk to. Like there's no one who can relate.";
+        break;
+        
+        case 3:
+        std::cout << "\nSCARED.";
+        std::cout << "\n\nFear can whisper many things: STAY THE SAME, STAY INSIDE, and especially, KEEP HIDING. ";
+        std::cout << "Fear can feel like safety, comfort, and ease.";
+        break;
+        
+        case 4:
+        std::cout << "\nTIRED.";
+        std::cout << "\n\nBeing misunderstood wreaks havoc on our energy. Like a vampire, it robs us and leaves us fatigued.";
+        break;
+        
+        case 5:
+        std::cout << "\nUNHEARD.";
+        std::cout << "\n\nWho's listening? No one. Who cares? No one you know.";
+        break;
+        
+        default:
+        std::cout << "\nOther people's pain can be difficult to handle, but we're stronger together.";
+        std::cout << "Let's learn more about each other.";
+        
+    } // end switch
+  
+} // end userNoAnswer()
+
+int main(){
+    
+    std::cout << "Hey! Welcome to SOMETIMES, I FEEL LIKE!";
+    std::cout << "\n---------------------------";
+    std::cout << "\n\nThis empathy app provides different people's lived experiences straight from their own mouths.\n\nCan you match the quote with the correct identity?";
+    std::cout << "\n\nWe're all a little different from one another. These differences are intentional, so let's celebrate them!";
+    std::cout << "\n\n> Issues or questions? Contact the developer at electricegghead@gmail.com";
+    std::cout << "\n---------------------------";
+    std::cout << "\n\nWhat's your name? ";
+    std::getline(std::cin, userName);
+    std::cout << "I'm glad you're using this app, " << userName << "!";
+    std::cout << "\n\nHave you ever felt like no one understood you? ";
+    std::cout << "\n\nYes - 1\nNo - 2\nSometimes - 3\n" << std::endl; // will be a button. one-click game.
+    std::cin >> userAnswer;
+    
+    switch (userAnswer) {
+        
+    case 1: 
+    std::cout << "\nMe, too. It can be hard to understand differences, especially because we get so scared to ask questions.";    
+    break;
+    
+    case 2:
+    userNoAnswer();
+    break;
+    
+    case 3:
+    std::cout << "\nYeah, some things make us feel more misunderstood than others, don't they?";
+    break;
+    
+    default:
+    std::cout << "\nAsking questions with an open mind is a great way to get to know someone better,";
+    std::cout << "expand your view, and grow your empathy.";
+    } // end switch
+    
+std::cout << "\n\nSo, if you've felt misunderstood, let yourself feel that again.";
+std::cout << "\n\nLet yourself feel those emotions, again. \nFeel the loneliness, emptiness, sadness, and frustration.";
+std::cout << "\nFeel your smallness, the tears trickling down your face, the ache in your heart, \nand your desire to find someone who cared.";
+std::cout << "\n\nClose your eyes and go back to that time. When you arrive there, open your eyes and press play...";    
+    
+ return 0;   
+}
